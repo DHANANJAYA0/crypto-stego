@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome • Team-21</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes gridShift { 0% { background-position: 0 0, 0 0; } 100% { background-position: 0 20px, 20px 0; } }
+    @keyframes scan { 0% { background-position-y: 0; } 100% { background-position-y: 100%; } }
+    @keyframes neonPulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 20px #00f0ff; } 50% { transform: scale(1.02); box-shadow: 0 0 28px #ff00ff; } }
+  </style>
+  </head>
+<body class="min-h-screen text-white relative">
+  <div class="absolute inset-0 -z-10">
+    <div class="h-full w-full" style="background: radial-gradient(ellipse at center, #0a0f1f 0%, #050914 40%, #02040a 100%);"></div>
+    <div class="absolute inset-0 opacity-30" style="background-image: repeating-linear-gradient(0deg, rgba(0,240,255,0.08) 0 2px, transparent 2px 20px), repeating-linear-gradient(90deg, rgba(255,0,255,0.06) 0 2px, transparent 2px 20px); background-size: 100% 100%; animation: gridShift 12s linear infinite;"></div>
+    <div class="absolute inset-0" style="background-image: linear-gradient(transparent, rgba(255,255,255,0.03) 50%, transparent); background-size: 100% 4px; animation: scan 6s linear infinite;"></div>
+  </div>
+  <div class="min-h-screen flex items-center justify-center px-4">
+    <div class="text-center">
+      <div class="mx-auto mb-6 h-32 w-32 rounded-full flex items-center justify-center relative overflow-hidden ring-2 ring-cyan-400/60 shadow-[0_0_20px_#00f0ff]" style="background: radial-gradient(circle, rgba(0,240,255,0.12) 0%, rgba(255,0,255,0.12) 100%); animation: neonPulse 3s ease-in-out infinite;">
+        <img src="{{ url_for('static', filename='cmr_logo.png.jpg') }}" alt="CMR College logo" class="h-24 w-24 object-contain"
+             onerror="this.onerror=null; this.src='https://via.placeholder.com/96x96.png?text=CMR';" />
+        <span class="absolute bottom-1 right-2 text-sm font-bold bg-cyan-500/30 backdrop-blur rounded px-1">21</span>
+      </div>
+      <div class="relative inline-block">
+        <span class="absolute left-0 right-0 -top-1 blur-sm text-5xl md:text-7xl font-extrabold text-cyan-400">Team-21</span>
+        <h1 class="relative text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text" style="background-image: linear-gradient(90deg,#00f0ff,#ff00ff);">Team-21</h1>
+      </div>
+      <p class="mt-3 text-cyan-200">Robust Image Steganography with AES-256-GCM</p>
+      <a href="/login" class="mt-8 inline-block px-6 py-3 rounded-xl border border-cyan-400 text-cyan-200 hover:text-black hover:bg-cyan-300 shadow-[0_0_12px_#00f0ff] transition">Get started</a>
+    </div>
+  </div>
+</body>
+</html>
